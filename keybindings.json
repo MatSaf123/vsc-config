@@ -2,18 +2,14 @@
 [
   // NAVIGATION
   {
-    "key": "ctrl+shift+a",
+    "key": "ctrl+shift+j",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+b",
+    "key": "ctrl+shift+k",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+shift+j",
-    "command": "workbench.action.togglePanel"
   },
   {
     "key": "ctrl+shift+n",
@@ -36,19 +32,23 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "n",
+    "key": "shift+5",
     "command": "explorer.newFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
     "command": "renameFile",
-    "key": "r",
+    "key": "shift+r",
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "shift+n",
+    "key": "d",
     "command": "explorer.newFolder",
-    "when": "explorerViewletFocus"
+    "when": "explorerViewletFocus && !inputFocus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "" // Stop running python terminal dude
   },
   // {
   //   "key": "shift+n",
@@ -57,7 +57,7 @@
   // },
   {
     "command": "deleteFile",
-    "key": "d",
+    "key": "shift+d",
     "when": "filesExplorerFocus && !inputFocus"
   },
   // EXTRA
@@ -73,5 +73,43 @@
   {
     "key": "ctrl+g",
     "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-markdown-preview-enhanced.openPreview",
+    "when": "editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "f5",
+    "command": "-debug.openView",
+    "when": "!debuggersAvailable"
+  },
+  {
+    "key": "ctrl+e ctrl+h",
+    "command": "-sqltools.runFromHistory",
+    "when": "!config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "ctrl+e ctrl+e",
+    "command": "-sqltools.executeQuery",
+    "when": "editorHasSelection && editorTextFocus && !config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "ctrl+e ctrl+a",
+    "command": "-sqltools.runFromBookmarks",
+    "when": "!config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "f5",
+    "command": "sqltools.executeQuery"
+  },
+  {
+    "key": "ctrl+shift+q",
+    "command": "sqltoolsViewConnectionExplorer.focus"
   }
 ]

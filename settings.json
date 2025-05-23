@@ -1,158 +1,210 @@
 {
-    "editor.formatOnSave": true,
-    "editor.suggest.insertMode": "replace",
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "editor.linkedEditing": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "window.zoomLevel": 0.5,
-    "launch": {},
-    "[json]": {},
-    "editor.minimap.enabled": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "update.showReleaseNotes": false,
-    "zenMode.hideLineNumbers": false,
-    "editor.lineNumbers": "relative",
-    "vim.leader": "<Space>",
-    "vim.hlsearch": true,
-    // "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-      // NAVIGATION
-      // switch b/w buffers
-      {
-        "before": ["<S-h>"],
-        "commands": [":bprevious"]
-      },
-      {
-        "before": ["<S-l>"],
-        "commands": [":bnext"]
-      },
-      // splits
-      {
-        "before": ["leader", "v"],
-        "commands": [":vsplit"]
-      },
-      {
-        "before": ["leader", "s"],
-        "commands": [":split"]
-      },
-      // panes
-      {
-        "before": ["leader", "h"],
-        "commands": ["workbench.action.focusLeftGroup"]
-      },
-      {
-        "before": ["leader", "j"],
-        "commands": ["workbench.action.focusBelowGroup"]
-      },
-      {
-        "before": ["leader", "k"],
-        "commands": ["workbench.action.focusAboveGroup"]
-      },
-      {
-        "before": ["leader", "l"],
-        "commands": ["workbench.action.focusRightGroup"]
-      },
-      {
-        "before": ["[", "d"],
-        "commands": ["editor.action.marker.prev"]
-      },
-      {
-        "before": ["]", "d"],
-        "commands": ["editor.action.marker.next"]
-      },
-      {
-        "before": ["<leader>", "c", "a"],
-        "commands": ["editor.action.quickFix"]
-      },
-      {
-        "before": ["leader", "p", "f"],
-        "commands": ["workbench.action.quickOpen"]
-      },
-      // `leader+p+s` for grep
-      {
-        "before": ["leader", "p", "s"],
-        "commands": ["workbench.view.search"]
-      },
-      {
-        "before": ["leader", "p", "p"],
-        "commands": ["editor.action.formatDocument"]
-      },
-      {
-        "before": ["shift+k"],
-        "commands": ["editor.action.showHover"]
-      },
-      {
-        "before": ["g", "d"],
-        "commands": ["editor.action.revealDefinition"]
-      },
-      {
-        "before": ["g", "r"],
-        "commands": ["editor.action.goToReferences"]
-      },
-      {
-        "before": ["<leader>", "r", "n"],
-        "commands": ["editor.action.rename"]
-      },
-      {
-        "key": "ctrl+shift+y",
-        "command": "vim.remap",
-        "when": "inputFocus && vim.mode == 'Normal'",
-        "args": {
-          "after": ["y", "y"]
-        }
-      },
-      {
-        "before": ["<leader>", "q", "q"],
-        "commands": ["workbench.action.closeEditorsInGroup"]
+  "editor.suggest.insertMode": "insert",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "never"
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "editor.linkedEditing": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 0.5,
+  "launch": {},
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "update.showReleaseNotes": false,
+  "zenMode.hideLineNumbers": false,
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  // "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+    // splits
+    {
+      "before": ["leader", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["leader", "s"],
+      "commands": [":split"]
+    },
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    // Find in files
+    {
+      "before": ["<leader>", "p", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // `leader+p+s` for grep
+    {
+      "before": ["<leader>", "p", "s"],
+      "commands": ["workbench.view.search"]
+    },
+    // find in current file
+    {
+      "before": ["<leader>", "p", "c", "f"],
+      "commands": ["actions.find"]
+    },
+    // format
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["shift+k"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "key": "ctrl+shift+y",
+      "command": "vim.remap",
+      "when": "inputFocus && vim.mode == 'Normal'",
+      "args": {
+        "after": ["y", "y"]
       }
-    ],
-    "vim.visualModeKeyBindings": [
-      // Stay in visual mode while indenting
-      {
-        "before": ["<"],
-        "commands": ["editor.action.outdentLines"]
-      },
-      {
-        "before": [">"],
-        "commands": ["editor.action.indentLines"]
-      },
-      // Move selected lines while staying in visual mode
-      {
-        "before": ["J"],
-        "commands": ["editor.action.moveLinesDownAction"]
-      },
-      {
-        "before": ["K"],
-        "commands": ["editor.action.moveLinesUpAction"]
-      },
-      // toggle comment selection
-      {
-        "before": ["leader", "c"],
-        "commands": ["editor.action.commentLine"]
-      },
-      // Yank to system clipboard. TODO: Can I somehow exit visual mode after that?
-      {
-        "before": ["<leader>", "y"],
-        "commands": ["editor.action.clipboardCopyAction"]
-      }
-    ],
-    "[typescriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "go.toolsManagement.autoUpdate": true,
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["<leader>", "q", "q"],
+      "commands": ["workbench.action.closeEditorsInGroup"]
     },
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // Jump to last/next place. Go forward/Go back
+    {
+      "before": ["<C-i>"],
+      "commands": ["workbench.action.navigateForward"]
     },
-    "workbench.activityBar.location": "hidden",
-    "github.copilot.enable": {
-      "*": false,
-      "plaintext": false,
-      "markdown": false,
-      "scminput": false
+    {
+      "before": ["<C-o>"],
+      "commands": ["workbench.action.navigateBack"]
     },
-    "gitlens.mode.active": "zen"
-  }
-  
+    // Can i open file tree here...? I can!
+    // It doesn't really work when u want to close filetree,
+    // but on other hand - it didn't do that in neovim either
+    {
+      "before": ["<leader>", "p", "v"],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    // Move selected lines while staying in visual mode
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // toggle comment selection
+    {
+      "before": ["leader", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    // Yank to system clipboard. TODO: Can I somehow exit visual mode after that?
+    {
+      "before": ["<leader>", "y"],
+      "commands": ["editor.action.clipboardCopyAction"]
+    }
+  ],
+  //  "[typescriptreact]": {
+  //    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  //  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.biome": "always",
+      "source.organizeImports.biome": "always"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.biome": "always",
+      "source.organizeImports.biome": "always"
+    }
+  },
+  "go.toolsManagement.autoUpdate": true,
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.activityBar.location": "hidden",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "workbench.startupEditor": "none",
+  "editor.renderWhitespace": "none",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "Notes.notesLocation": "/home/mateusz/vsc-notes",
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "prettier.embeddedLanguageFormatting": "off",
+  "chat.commandCenter.enabled": false
+}
